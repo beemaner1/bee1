@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+	<body>
+		<title>mysite</title>
+		<style>
+			.floatl {
+				float: left;
+			}
+			body {
+				margin: 0;
+                background: #1E1F22;
+			}
+			.gg {
+				font-family: sans-serif;
+                font-size: 20px;
+				font-weight: 40;
+				color: #B3BABF;
+				background: #111214; border: 2px solid #303030;
+                border-radius: 5px;
+                padding: 15px;
+                margin: 10% 25% 10% 25%;
+				box-shadow: 0px 0px 15px #111214;
+			}
+			.post {
+				font-family: sans-serif;
+                font-size: 20px;
+				font-weight: 40;
+				padding: 5px;
+				background: #313338;
+				border-radius: 25px;
+				margin: 1% 1% 1% 1%;
+			}
+			.gg1 {
+				text-decoration: None;
+				color: #B3BABF;
+			}
+		</style>
+	</body>
+	<head>
+		<div class=gg>
+			<p>{{info}}</p>
+			
+			<form method="post">
+				<input type="text" size=30 name="title"><br><br>
+				<textarea name="text" rows=5 cols=80></textarea>
+				<input type="submit" name="o" value="post">
+			</form>
+			
+			<p>{{pred}}</p>
+			
+			<br>
+			
+			<form method="post">
+				<input type="submit" name="y" value="ydolit seba">
+			</form>
+			
+			<br>
+			
+			{% for entry in entries %}
+				<a href="{{ url_for('show_post', post_id=entry.id) }}" class="gg1">
+				<div class=post>
+				
+					{% if entry.userId %}
+						<p>{{ entry.userName }}</p>
+					{% else %}
+						<p> анонимус </p>
+					{% endif %}
+					
+					<h1>{{ entry.title }} </h1>
+					
+				</div>
+				</a>
+			{% else %}
+				<p> никого тут нет </p>
+			{% endfor %}
+		</div>
+	</head>
+</html>

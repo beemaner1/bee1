@@ -1,0 +1,14 @@
+<!doctype html>
+
+<html>
+	<head>
+	
+		<p>{{name}}</p>
+		<form method="post">
+			<input type="submit" name="gg" value="gg">
+		</form>
+	</head>
+	<body>
+		<title>mysite</title>
+	</body>
+</html>

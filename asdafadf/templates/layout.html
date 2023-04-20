@@ -1,0 +1,13 @@
+<!doctype html>
+
+<title>Flaskr</title>
+
+<div>
+  <div>
+	<a href="{{ url_for('logout') }}">log out</a>
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>

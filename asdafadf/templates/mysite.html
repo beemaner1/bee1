@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>mysite</title>
+		
+		<style>
+			.image {
+				float: right;
+				padding: 10px;
+				width: 70%;
+			}
+			.floatl {
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<h1 class="floatl">{{text}}</h1>
+		<h1 class="floatl">times new roman moment</h1>
+		
+		
+		<form method="post">
+			<input type="submit" name="login" value="login" class="floatl">
+			<input type="text" name="log" value="log" class="floatl">
+			<input type="password" name="parol" value="pASSword" class="floatl">
+		</form>
+
+		<a href="http://10.196.15.129:5000/xd/100">
+			<img src="{{ url_for('static', filename='monitor-1.png') }}" class=image>
+		</a>
+		
+	</body>
+</html>
